@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import Clock from './Clock';
-import './styles.css';
+import Clock from "./Clock";
+import "./styles.css";
 
 function ClockExercise() {
   return (

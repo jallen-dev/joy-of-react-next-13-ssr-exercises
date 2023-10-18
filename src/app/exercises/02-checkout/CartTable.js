@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 function CartTable({ items, handleDeleteItem }) {
   return (
@@ -19,11 +19,7 @@ function CartTable({ items, handleDeleteItem }) {
             <td>${item.price}</td>
             <td>{item.quantity}</td>
             <td>
-              <button
-                onClick={() => handleDeleteItem(item)}
-              >
-                Remove
-              </button>
+              <button onClick={() => handleDeleteItem(item)}>Remove</button>
             </td>
           </tr>
         ))}
