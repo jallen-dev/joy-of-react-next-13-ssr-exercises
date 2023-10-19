@@ -8,7 +8,22 @@ import CheckoutFlow from "./CheckoutFlow";
 import "./styles.css";
 
 function CheckoutExercise() {
-  const [items, dispatch] = React.useReducer(reducer, []);
+  const [items, dispatch] = React.useReducer(reducer, null);
+
+  React.useEffect(() => {
+    const cart = localStorage.getItem("cart") ?? "[]";
+
+    dispatch({
+      type: "initialize",
+      items: JSON.parse(cart),
+    });
+  }, []);
+
+  React.useEffect(() => {
+    if (items !== null) {
+      localStorage.setItem("cart", JSON.stringify(items));
+    }
+  }, [items]);
 
   return (
     <>

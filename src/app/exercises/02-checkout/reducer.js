@@ -24,6 +24,10 @@ function reducer(state, action) {
         draftState.splice(itemIndex, 1);
         return;
       }
+
+      case "initialize": {
+        return action.items;
+      }
     }
   });
 }
