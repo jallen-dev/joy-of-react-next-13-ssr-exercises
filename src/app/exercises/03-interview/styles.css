@@ -30,6 +30,17 @@ article {
   margin-bottom: 32px;
   aspect-ratio: 1 / 1;
 }
+
+aside {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  aside {
+    display: block;
+  }
+}
+
 aside {
   align-self: flex-start;
   position: sticky;
